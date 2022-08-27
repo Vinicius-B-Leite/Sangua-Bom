@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Text, View } from 'react-native';
 import Routes from './src/routes';
+import 'react-native-gesture-handler';
 
 
 
