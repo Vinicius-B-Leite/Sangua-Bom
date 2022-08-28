@@ -8,7 +8,7 @@ export const ConteinerHeader = styled.View`
 `
 
 export const Logo = styled.Text`
-    font-size: 20;
+    font-size: 20px;
     color: #ffffff;
     font-weight: 500;
 `

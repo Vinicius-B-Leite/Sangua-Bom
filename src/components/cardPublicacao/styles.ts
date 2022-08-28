@@ -28,4 +28,5 @@ export const ConteinerCardPublicacao = styled.View`
 
     export const ConteinerInfo = styled.View`
         padding: 5%;
+        
     `

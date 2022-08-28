@@ -17,7 +17,7 @@ const Tab = createBottomTabNavigator();
 
 
 function Routes() {
-    const iconInativo = '#e66b4c'
+    const iconInativo = '#000000'
     const iconAtiva = '#f9220e'
     return (
         <NavigationContainer>
@@ -28,8 +28,8 @@ function Routes() {
                     tabBarStyle: { backgroundColor: '#ffffff' },
                 }}>
 
-                <Tab.Screen name="Home" component={RotasStack} options={{ tabBarIcon: (color) => <Entypo name="home" size={26} color={color.focused ? iconAtiva : iconInativo} /> }} />
-                <Tab.Screen name="PerguntasERespostas" component={PerguntasERespostas} options={{ tabBarIcon: (color) => <AntDesign name="questioncircle" size={22} color={iconInativo} /> }} />
+                <Tab.Screen name="Home2" component={RotasStack} options={{ tabBarIcon: (color) => <Entypo name="home" size={26} color={color.focused ? iconAtiva : iconInativo} /> }} />
+                <Tab.Screen name="PerguntasERespostas" component={PerguntasERespostas} options={{ tabBarIcon: (color) => <AntDesign name="questioncircle" size={22} color={color.focused ? iconAtiva : iconInativo} /> }} />
                 <Tab.Screen name="Procurar" component={Buscar} options={{ tabBarIcon: (color) => <FontAwesome name="search" size={22} color={color.focused ? iconAtiva : iconInativo} /> }} />
                 <Tab.Screen name="Perfil" component={Perfil} options={{ tabBarIcon: (color) => <AntDesign name="user" size={24} color={color.focused ? iconAtiva : iconInativo} /> }} />
 
