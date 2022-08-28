@@ -13,7 +13,7 @@ function CardPublicacao({publi}: {publi: IPublicao}) {
                 <AntDesign name="user" size={24} color="black" />
                 <NomeUsuario>{publi.usuario}</NomeUsuario>
             </ConteinerUsuario>
-            <Cartaz altura={tela.height / 2.5} source={{ uri: publi.cartaz }} />
+            <Cartaz altura={tela.height / 2.8} source={{ uri: publi.cartaz }} />
 
             <ConteinerInfo>
                 <Text>{publi.endereco}</Text>

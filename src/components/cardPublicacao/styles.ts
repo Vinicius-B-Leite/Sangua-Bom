@@ -9,8 +9,7 @@ export const ConteinerCardPublicacao = styled.View`
     export const ConteinerUsuario = styled.View`
         flex-direction: row;
         align-items: center;
-        padding-left: 5%;
-        padding-bottom: 3%;
+        padding-left: 3%;
     `
         export const NomeUsuario = styled.Text`
             padding-left: 2%;
@@ -23,7 +22,7 @@ export const ConteinerCardPublicacao = styled.View`
     export const Cartaz = styled.Image<CartazProps>`
         width: 100%;
         height: ${props => props.altura}px;
-        resizeMode: cover;
+        resizeMode: contain;
     `
 
     export const ConteinerInfo = styled.View`

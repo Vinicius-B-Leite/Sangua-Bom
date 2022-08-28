@@ -18,7 +18,6 @@ function Home() {
         const getPublicacoes = async () =>{
             const dados = await getDocs(colecaoPublicacoes)
             const publica = dados.docs.map((doc)=> ({...doc.data(), id: doc.id}))
-            console.log(publica)
             setPublicacoes(dados.docs.map((doc)=> ({...doc.data(), id: doc.id})))
         }
         getPublicacoes()
