@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { createStackNavigator } from '@react-navigation/stack'
-import Home from '../../screens/home';
-import Configuracoes from '../../screens/config';
+import Home from '../../../screens/home';
+import Configuracoes from '../../../screens/config';
 
 
-function RotasStack() {
+function RotasStackHome() {
     const Stack = createStackNavigator();
 
     return (
@@ -14,4 +14,4 @@ function RotasStack() {
         </Stack.Navigator>)
 }
 
-export default RotasStack;
+export default RotasStackHome;

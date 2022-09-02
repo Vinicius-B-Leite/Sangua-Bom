@@ -16,11 +16,11 @@ import 'react-native-get-random-values';
 import { v4 } from 'uuid'
 import { IPublicao } from '../../types/IPublicacao';
 
-import { useNavigation } from '@react-navigation/native'
+
+
 
 function CriarPublicacao() {
     const [image, setImage] = useState<string>("");
-    const navigator =  useNavigation()
 
 
     const { handleSubmit, control, formState: { errors }, setValue } = useForm<IPublicao>()
@@ -61,16 +61,13 @@ function CriarPublicacao() {
         limparInputs
     }
 
-    const cancelar = () => {
-        limparInputs()
-        navigator.navigate("Home")
-    }
+    
 
 
 
     return (
         <ScrollView>
-            <HeaderPost cancelar={()=>cancelar()} criarPublicacao={handleSubmit(criarPublicacao)} />
+            <HeaderPost criarPublicacao={handleSubmit(criarPublicacao)} />
             <Form>
                 <TouchableOpacity onPress={pegarImagem}>
                     {image.length ?
