@@ -1,10 +1,10 @@
 export interface IPublicao{
     usuario: string,
-    cartaz?: string,
+    cartaz: string,
     endereco: string,
     horario_aberto: string,
     site?: string,
-    telefone?: string,
+    telefone: string,
     descricao: string,
     id: string
 }

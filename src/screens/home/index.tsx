@@ -14,12 +14,15 @@ import { IPublicao } from "../../types/IPublicacao";
 
 function Home() {
     const [publicacoes, setPublicacoes] = useState<IPublicao[]>([])
+    const [refresh, setRefresh] = useState<boolean>(false)
+
+    const getPublicacoes = async () =>{
+        const dados = await getDocs(colecaoPublicacoes)
+        setPublicacoes(dados.docs.map((doc)=> ({...doc.data(), id: doc.id})))
+    }
+
     useEffect(()=>{ 
-        const getPublicacoes = async () =>{
-            const dados = await getDocs(colecaoPublicacoes)
-            const publica = dados.docs.map((doc)=> ({...doc.data(), id: doc.id}))
-            setPublicacoes(dados.docs.map((doc)=> ({...doc.data(), id: doc.id})))
-        }
+
         getPublicacoes()
     }, [])
     return (
@@ -29,7 +32,15 @@ function Home() {
             <FlatList
                 data={publicacoes}
                 renderItem={({ item }) => <TouchableOpacity><CardPublicacao publi={item}/></TouchableOpacity>}
-                keyExtractor={(item) => item.usuario}
+                keyExtractor={(item) => item.id}
+                refreshing={refresh}
+                onRefresh={()=>{
+                    setRefresh(true)
+                    setTimeout(()=>{
+                        getPublicacoes()
+                        setRefresh(false)
+                    })
+                }}
             />
             
         </View>
